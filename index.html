@@ -7,7 +7,7 @@
                 margin: 0;
             }
             .main-bg {
-                background-image: url("/static/resized/circuit_board.jpg");
+                background-image: url("/static/circuit_board.jpg");
                 text-align: center;
             }
             .parallax {
@@ -23,8 +23,13 @@
                 height: 40em;
             }
 
-            .something-else {
+            .education {
                 background-image: url("/static/DSC_0141.JPG");
+                height: 40em;
+            }
+
+            .technical {
+                background-image: url("/static/kaunas.jpg");
                 height: 40em;
             }
 
@@ -39,6 +44,18 @@
                 color: #f7f7f7;
                 background-color: #868686d9;
             }
+
+            .content {
+                display: inline-block;
+                margin-top: 6em;
+                padding-left: 4em;
+            }
+            .content span {
+                padding: 1em;
+                font-size: 1.5em;
+                color: #1f1f1f;
+                background-color: #bfbbbb70;
+            }
         </style>
     </head>
     <body>
@@ -50,16 +67,35 @@
         </div>
 
         <div class="parallax about-me">
-            Placeholder...
+            <div class="content">
+                <span>Placeholder</span>
+            </div>
+        </div>
+
+        <div class="parallax main-bg">
+            <div class="title">
+                <span>Education</span>
+            </div>
+        </div>
+
+        <div class="parallax education">
+            <div class="content">
+                <span>Placeholder</span>
+            </div>
+        </div>
+
+        <div class="parallax main-bg">
+            <div class="title">
+                <span>Technical Skills</span>
+            </div>
+        </div>
+
+        <div class="parallax technical">
+            <div class="content">
+                <span>Placeholder</span>
+            </div>
         </div>
 
         <div class="parallax main-bg"></div>
-
-        <div class="parallax something-else">
-            Placeholder...
-        </div>
-
-        <div class="parallax main-bg"></div>
-
     </body>
 </html>
