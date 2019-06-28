@@ -1,6 +1,7 @@
 from nginx:latest
 
 RUN mkdir -p /var/www/
+RUN mkdir -p /etc/nginx/sites-enabled
 
 copy ./src/ /var/www/
 copy ./nginx/ /etc/nginx/
