@@ -1,0 +1,10 @@
+@font-face {
+    font-family: "Ubuntu";
+    src: url("/static/fonts/Ubuntu-Bold.ttf") format("truetype");
+}
+
+body {
+    font-family: "Ubuntu" !important;
+}
+
+@import '~bootstrap/scss/bootstrap.scss';
