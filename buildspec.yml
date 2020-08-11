@@ -8,8 +8,9 @@ phases:
   build:
     commands:
       - >
-        docker build
-        -t arronmoore_com .
+        docker build -t arronmoore_com .
+      - docker tag arronmoore_com $REPO_URI:build-arronmoore_com
+
   post_build:
     commands:
-      - docker push arronmoore_com
+      - docker push $REPO_URI:build-arronmoore_com
