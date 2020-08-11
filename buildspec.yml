@@ -10,3 +10,6 @@ phases:
       - >
         docker build
         -t arronmoore_com .
+  post_build:
+    commands:
+      - docker push $REPO_URI:arronmoore_com
