@@ -29,3 +29,5 @@ WORKDIR /var/www/arronmoore.com/
 RUN npm install
 
 RUN npx gatsby build
+
+CMD ["nginx", "-g", "daemon off;"]
