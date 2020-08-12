@@ -2,6 +2,9 @@
 ---
 version: 0.2
 phases:
+  pre_build:
+    commands:
+      - $(aws ecr get-login --region $AWS_DEFAULT_REGION --no-include-email)
   install:
     runtime-versions:
       docker: 19
