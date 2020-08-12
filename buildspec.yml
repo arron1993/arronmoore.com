@@ -5,20 +5,22 @@ phases:
   pre_build:
     commands:
       - $(aws ecr get-login --region $AWS_DEFAULT_REGION --no-include-email)
+      - IMAGE_TAG=build-$(echo $CODEBUILD_BUILD_ID | awk -F":" '{print $2}')
   install:
     runtime-versions:
       docker: 19
   build:
     commands:
       - >
-        docker build -t arronmoore_com .
-      - docker tag arronmoore_com $REPO_URI:build-arronmoore_com
+        docker build -t $REPO_URI:latest .
+      - docker tag $REPO_URI:latest $REPO_URI:$IMAGE_TAG
 
   post_build:
     commands:
-      - docker push $REPO_URI:build-arronmoore_com
+      - docker push $REPO_URI:latest
+      - docker push $REPO_URI:$IMAGE_TAG
       - >
-        printf '[{"name":"%s","imageUri":"%s:%s"}]' arronmoore_com $REPO_URI $TAG | tee imagedefinitions.json
+        printf '[{"name":"%s","imageUri":"%s:%s"}]' arronmoore_com $REPO_URI latest | tee imagedefinitions.json
 artifacts:
   files:
     - imageDetail.json
