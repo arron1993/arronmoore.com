@@ -6,7 +6,7 @@ Resources:
   - TargetService:
       Type: AWS::ECS::Service
       Properties:
-        TaskDefinition: "arronmoore_com:2"
+        TaskDefinition: "arn:aws:ecs:eu-west-2:376432685688:task-definition/arronmoore_com:2"
         LoadBalancerInfo:
           ContainerName: "arronmoore.com"
           ContainerPort: 80
