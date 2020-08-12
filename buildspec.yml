@@ -17,3 +17,8 @@ phases:
   post_build:
     commands:
       - docker push $REPO_URI:build-arronmoore_com
+      - >
+        printf '[{"name":"%s","imageUri":"%s:%s"}]' arronmoore_com $REPO_URI $TAG | tee imagedefinitions.json
+artifacts:
+  files:
+    - imagedefinitions.json
