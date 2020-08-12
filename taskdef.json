@@ -13,7 +13,7 @@
             ],
             "cpu": 1024,
             "memory": 256,
-            "image": "arronmoore_com",
+            "image": "<IMAGE1_NAME>",
             "name": "arronmoore_com"
         }
     ],
