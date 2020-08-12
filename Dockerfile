@@ -6,12 +6,12 @@ ENV PATH="/root/.nvm/versions/node/v${NODE_VERSION}/bin/:${PATH}"
 
 RUN apt update
 RUN apt install -y curl nginx
-RUN curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.35.3/install.sh | bash
+# RUN curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.35.3/install.sh | bash
 
 
-RUN . "$NVM_DIR/nvm.sh" && nvm install ${NODE_VERSION}
-RUN . "$NVM_DIR/nvm.sh" && nvm use v${NODE_VERSION}
-RUN . "$NVM_DIR/nvm.sh" && nvm alias default v${NODE_VERSION}
+# RUN . "$NVM_DIR/nvm.sh" && nvm install ${NODE_VERSION}
+# RUN . "$NVM_DIR/nvm.sh" && nvm use v${NODE_VERSION}
+# RUN . "$NVM_DIR/nvm.sh" && nvm alias default v${NODE_VERSION}
 
 
 RUN mkdir -p /var/www/arronmoore.com/
@@ -26,8 +26,8 @@ RUN ln -s /etc/nginx/sites-available/arronmoore.conf /etc/nginx/sites-enabled/ar
 
 WORKDIR /var/www/arronmoore.com/
 
-RUN npm install
+#  RUN npm install
 
-RUN npx gatsby build
+# RUN npx gatsby build
 
 CMD ["nginx", "-g", "daemon off;"]
