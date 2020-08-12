@@ -21,5 +21,6 @@ phases:
         printf '[{"name":"%s","imageUri":"%s:%s"}]' arronmoore_com $REPO_URI $TAG | tee imagedefinitions.json
 artifacts:
   files:
-    - imagedefinitions.json
+    - imageDetail.json
     - appspec.yaml
+    - taskdef.json
