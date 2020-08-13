@@ -1,17 +1,14 @@
 import React from "react"
 
 import Layout from "../components/layout"
-import HeroImage from "../components/hero-image"
 
 import "./home/home.scss"
 
 export default function Home({data}) {
   return (
-    <Layout>
-      <HeroImage/>
+    <Layout pageName="home">
       <div
         style={{
-          
           paddingTop:"15%",
           filter: "drop-shadow(1px 1px 1px #000)"
         }}
