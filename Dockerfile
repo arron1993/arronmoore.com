@@ -1,18 +1,8 @@
-from ubuntu:20.04
+FROM node:12.18.3
 
-ENV NODE_VERSION=12.18.3
-ENV NVM_DIR=/root/.nvm
-ENV PATH="/root/.nvm/versions/node/v${NODE_VERSION}/bin/:${PATH}"
 
 RUN apt update
-RUN apt install -y curl nginx
-RUN curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.35.3/install.sh | bash
-
-
-RUN . "$NVM_DIR/nvm.sh" && nvm install ${NODE_VERSION}
-RUN . "$NVM_DIR/nvm.sh" && nvm use v${NODE_VERSION}
-RUN . "$NVM_DIR/nvm.sh" && nvm alias default v${NODE_VERSION}
-
+RUN apt install -y nginx
 
 RUN mkdir -p /var/www/arronmoore.com/
 RUN mkdir -p /etc/nginx/sites-enabled/
