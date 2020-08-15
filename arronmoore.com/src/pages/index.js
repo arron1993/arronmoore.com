@@ -8,18 +8,19 @@ export default function Home({data}) {
   return (
     <Layout pageName="home">
       <div
+        className="text-center text-lg-left"
         style={{
           paddingTop:"15%",
           filter: "drop-shadow(1px 1px 1px #000)"
         }}
       >
-        <span 
-          className="text-white big d-block"> 
+        <div 
+          className="text-white text-big d-block"> 
           My name is Arron Moore
-        </span>
-        <span className="less-big text-white mt-2"> 
+        </div>
+        <div className="text-normal text-white mt-3"> 
           I am a full stack software developer
-        </span>
+        </div>
       </div>
     </Layout>
   )

@@ -10,9 +10,9 @@ export default function Photography({data}) {
   return (
     <Layout pageName="photography">
       <div className='row py-4 text-center'>
-        <div className='col-12'>
-          <div style={{fontSize: "1.5rem"}}> In my free time I take pictures of race cars, plants and insects</div>
-          <div style={{fontSize: "1.25rem"}} className="pt-2"> I use a Nikon D3200, a Sigma 150-600mm  telephoto lens and a Tamron 80mm macro lens</div>
+        <div className='col-12' className="text-center">
+          <div className="text-normal"> In my free time I take pictures of race cars, plants and insects</div>
+          <div className="pt-2 text-small"> I use a Nikon D3200, a Sigma 150-600mm  telephoto lens and a Tamron 80mm macro lens</div>
         </div>  
       </div>
 
