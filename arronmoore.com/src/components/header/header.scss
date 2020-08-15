@@ -1,0 +1,11 @@
+$headerText: #bdbdbd;
+
+.header {
+    background-color: #00000047;
+    z-Index: 99999;
+    color: $headerText;
+
+    .nav-link {
+        color: $headerText !important;
+    }
+}

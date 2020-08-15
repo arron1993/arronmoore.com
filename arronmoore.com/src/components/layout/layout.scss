@@ -32,6 +32,10 @@ body {
         font-size: 1rem; 
     }
 
+    .text-shadow {
+        filter: drop-shadow(0 0 1px #000);   
+    }
+    
     @include media-breakpoint-up(sm) { 
     }
 
