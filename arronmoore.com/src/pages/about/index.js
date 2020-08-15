@@ -6,9 +6,9 @@ import "./about.scss"
 
 export default function About({data}) {
   const number_words = {
-    4: "four",
-    5: "five",
-    6: "six",
+    4: "Four",
+    5: "Five",
+    6: "Six",
   }
   const years = new Date().getFullYear() - 2016
 
@@ -32,7 +32,7 @@ export default function About({data}) {
         </div>
         <div className="row">
           <div className="col-12 col-lg-6 mt-5 text-shadow"> 
-            With {number_words[years]} years professional experience using Python, Angular, and a wide variety of other technologies
+            {number_words[years]} years professional experience using Python, Angular, and a wide variety of other technologies
           </div>
         </div>
       </div>

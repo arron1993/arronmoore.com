@@ -12,10 +12,10 @@ export default function Photography({data}) {
       <div className='row py-4 text-center'>
         <div className='col-12'>
           <div style={{fontSize: "1.5rem"}}> In my free time I take pictures of race cars, plants and insects</div>
-          <div style={{fontSize: "1.25rem"}} className="pt-2"> I use a Nikon D3200, a Sigma 150-600mm lens and a Tamrom 80mm macro lens</div>
+          <div style={{fontSize: "1.25rem"}} className="pt-2"> I use a Nikon D3200, a Sigma 150-600mm  telephoto lens and a Tamron 80mm macro lens</div>
         </div>  
       </div>
-      
+
        <div className='row'>
         <PhotographyImage 
           src='/images/photography/c_tf.jpg'

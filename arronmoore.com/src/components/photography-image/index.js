@@ -3,10 +3,8 @@ import React from "react"
 class PhotographyImage extends React.Component {
 
     getImg() {
-      let classes = ["col-6", "p-5"]
-      if (this.props.side === "right") {
-        classes.push("justify-content-end")
-      }
+      const classes = ["col-6", "p-5"]
+
 
       return (
         <div className={classes.join(' ')}>
@@ -16,8 +14,13 @@ class PhotographyImage extends React.Component {
     }
     
     getLabel() {
+      let classes = "col-6 d-flex align-items-center img-label".split()
+
+      if (this.props.side === "right") {
+        classes.push("justify-content-end")
+      }
       return (
-        <div className='col-6 d-flex align-items-center img-label'>
+        <div className={classes.join(' ')}>
           <div>
             <div className="w-100"> {this.props.title} </div> 
             <div className="location font-italic"> - {this.props.location} </div>
@@ -33,7 +36,8 @@ class PhotographyImage extends React.Component {
       if (this.props.side === "left") {
           left = this.getImg()
           right = this.getLabel()
-        } else {
+        } 
+        else if (this.props.side === "right") {
           left = this.getLabel()
           right = this.getImg()
         }
