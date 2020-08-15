@@ -15,24 +15,24 @@ export default function About({data}) {
   return (
     <Layout pageName="about">
       <div
-        className="text-normal"
+        className="text-normal text-center text-lg-left"
         style={{
           paddingTop:"10%",
          }}
       >
         <div className="row">
-          <div className="col-12 col-lg-6 my-2 text-shadow py-3"> 
+          <div className=" col-12 col-lg-6 my-2 text-shadow py-3"> 
             Born in Grimsby, studied in Nottingham but now living in Coventry.
           </div>
         </div>
         <div className="row">
           <div className="col-12 col-lg-6 my-2 offset-0 offset-lg-6 text-shadow"> 
-            Received a Masters degree in Computer Science from Nottingahm Trent University in 2016
+            Received a Masters degree in Computer Science from Nottingham Trent University in 2016
           </div>
         </div>
         <div className="row">
           <div className="col-12 col-lg-6 my-2 text-shadow"> 
-            {number_words[years]} years professional experience using Python, Angular, and a wide variety of other technologies
+            {number_words[years]} years of professional experience using Python, Angular, and a wide variety of other technologies
           </div>
         </div>
       </div>

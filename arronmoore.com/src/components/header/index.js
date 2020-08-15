@@ -18,7 +18,7 @@ class Header extends React.Component {
                         <Nav.Link className="text-white" href="/projects">projects</Nav.Link>
                         <Nav.Link className="text-white" href="/photography">photography</Nav.Link>
                     </Nav>
-                    <Nav>
+                    <Nav className="d-none d-lg-flex">
                         <Nav.Link className="text-white" href="https://www.instagram.com/arron.moore93/">
                             <FontAwesomeIcon icon={fab.faInstagram} />
                         </Nav.Link>
