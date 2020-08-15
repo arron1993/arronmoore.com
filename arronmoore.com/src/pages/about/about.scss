@@ -1,7 +1,19 @@
 body.about {
-    background: url("/images/laptop.jpg") no-repeat center center fixed;
+    background-image: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.4)
+    ),
+    url("/images/c_bulb.jpg");
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
+
+    .text-shadow {
+        filter: drop-shadow(1px 1px 1px #000);
+    }
 }
