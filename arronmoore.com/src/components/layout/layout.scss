@@ -2,16 +2,23 @@
 
 @font-face {
     font-family: "Ubuntu";
-    src: url("/fonts/Ubuntu-Bold.ttf") format("truetype");
+    src: url("/fonts/Ubuntu-Regular.ttf") format("truetype");
 }
 
+@font-face {
+    font-family: "Poppins";
+    src: url("/fonts/Poppins-Regular.ttf") format("truetype");
+}
 
-
+@font-face {
+    font-family: "Rowdies";
+    src: url("/fonts/Rowdies-Regular.ttf") format("truetype");
+}
 
 @include media-breakpoint-up(xl) { }
 
 body {
-    font-family: "Ubuntu" !important;
+    font-family: "Poppins" !important;
 
     .text-big {
         font-size: 1.75rem
