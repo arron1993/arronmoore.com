@@ -1,7 +1,27 @@
-body.about {
-    background: url("/images/laptop.jpg") no-repeat center center fixed;
+body.photography {
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.4),
+        rgba(0, 0, 0, 0.4)
+      ), url("/images/camera.jpg");
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    color: white;
+
+    img {
+        border: 2px solid white;
+    }
+
+    .img-label {
+        font-size: 1.2rem;
+
+        .location {
+            font-size: 1rem;
+        }
+    }
 }
