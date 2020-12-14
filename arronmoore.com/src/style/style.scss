@@ -1,0 +1,23 @@
+@import "~bootstrap/scss/bootstrap.scss";
+
+@font-face {
+  font-family: "Ubuntu";
+  src: url("/fonts/Ubuntu-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("/fonts/Poppins-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Rowdies";
+  src: url("/fonts/Rowdies-Regular.ttf") format("truetype");
+}
+
+body {
+  font-family: "Poppins";
+}
+.text-white {
+  color: white;
+}

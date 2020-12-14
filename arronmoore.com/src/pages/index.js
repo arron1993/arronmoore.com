@@ -1,27 +1,37 @@
 import React from "react"
+import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 
-import "./home/home.scss"
+import s from "./home/home.module.scss"
 
-export default function Home({data}) {
-  return (
-    <Layout pageName="home">
-      <div
-        className="text-center text-lg-left"
-        style={{
-          paddingTop:"15%",
-          filter: "drop-shadow(1px 1px 1px #000)"
-        }}
-      >
-        <div 
-          className="text-white text-big d-block"> 
-          My name is Arron Moore
+class HomePage extends React.Component {
+  constructor(props) {
+    super()
+  }
+
+  render() {
+    return (
+      <Layout background={this.props.data.nasa.childImageSharp.fluid}>
+        <div className="d-flex h-100 w-100 mt-5 text-center justify-content-center">
+          <div>
+            <h1 className="text-white"> My Name is Arron Moore</h1>
+            <h4 className="text-white">I am a full stack Software Developer</h4>
+          </div>
         </div>
-        <div className="text-normal text-white mt-3"> 
-          I am a full stack software developer
-        </div>
-      </div>
-    </Layout>
-  )
+      </Layout>
+    )
+  }
 }
+export const query = graphql`
+  query {
+    nasa: file(relativePath: { eq: "home/c_nasa.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1920) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`
+export default HomePage

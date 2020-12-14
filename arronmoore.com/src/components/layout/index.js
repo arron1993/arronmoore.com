@@ -1,25 +1,27 @@
-import React from 'react'
-import { Helmet } from 'react-helmet';
+import React from "react"
+import Header from "../header"
+import BackgroundImage from "gatsby-background-image"
 
-import Header from '../header'
+import s from "./layout.module.scss"
+import "../../style/style.scss"
 
-import './layout.scss'
-
-
-const Layout = ({ children, pageName }) => {
-
+export default class Layout extends React.Component {
+  constructor(props) {
+    super()
+    this.background = props.background
+  }
+  render() {
     return (
-        <>
-        <Header />
-        <Helmet bodyAttributes={{
-            class: pageName
-        }}>
-        </Helmet>
-        <main className={`container`}>
-            { children }
-        </main>
-        </>
+      <>
+        <BackgroundImage
+          Tag={`div`}
+          fluid={this.background}
+          className={s.background}
+        >
+          <Header />
+          <main className={`container`}>{this.props.children}</main>
+        </BackgroundImage>
+      </>
     )
+  }
 }
-
-export default Layout
